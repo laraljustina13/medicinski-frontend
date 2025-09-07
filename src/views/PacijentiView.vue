@@ -15,6 +15,7 @@
         <input v-model="searchlastName" placeholder="Pretraži po prezimenu..." class="search-input"/>
         <input v-model="searchOIB" placeholder="Pretraži po OIB-u..." class="search-input" maxlength="11"/>
         <button @click="fetchPatients" class="btn-search">🔍 Pretraži</button>
+        
       </div>
     </div>
 
@@ -40,6 +41,7 @@
                <button @click="deletePacijent(pacijent)" class="btn-delete">🗑️ Obriši</button>
                <button @click="viewPregledi(pacijent)" class="btn-medical">🏥 Pregledi</button>
                <button @click="viewRecepti(pacijent)" class="btn-medical">💊 Recepti</button>
+                <button @click="showUploadModal(pacijent)" class="btn-upload">📁 Upload fileova</button>
             </td>
           </tr>
         </tbody>
